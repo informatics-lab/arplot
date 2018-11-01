@@ -71,7 +71,3 @@ class arplot(object):
         images = [cls.generate_qr_code(url), cls.get_marker()]
         min_shape = sorted( [(np.sum(i.size), i.size ) for i in images])[0][1]
         return Image.fromarray(np.hstack([np.asarray(i.resize(min_shape).convert('RGB'))  for i in images]))
-
-from ._version import get_versions
-__version__ = get_versions()['version']
-del get_versions
