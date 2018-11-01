@@ -9,7 +9,7 @@ setup(
     name='arplot',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    description='S3 manifests plugin for Intake',
+    description='An augmented reality plotting library.',
     url='https://github.com/informatics-lab/arplot',
     maintainer='Jacob Tomlinson',
     maintainer_email='jacob.tomlinson@informaticslab.co.uk',
