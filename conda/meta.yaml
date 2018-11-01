@@ -1,0 +1,34 @@
+package:
+   name: arplot
+   version: {{ GIT_DESCRIBE_TAG }}
+
+source:
+   path: ..
+git:
+  depth: false
+
+build:
+  number: {{ GIT_DESCRIBE_NUMBER }}
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+test:
+  source_files:
+    - tests
+  requires:
+    - pytest
+  commands:
+    - py.test --verbose
+
+about:
+  home: https://github.com/informaticslab/arplot
+  license: BSD
+  license_file: LICENSE
+  summary: |
+    An augmented realite plotting library
